@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wotraca-canada.github.io/wotraca-app/sitemap.xml
