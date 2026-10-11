@@ -25,154 +25,107 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WOTRACA Canada 2026</title>
-<link rel="manifest" href="./manifest.json">
-<meta name="theme-color" content="#C8102E">
-<script src="https://cdn.fedapay.com/checkout.js"></script>
+<link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIldPVFJBQ0EgQ2FuYWRhIiwKICAic2hvcnRfbmFtZSI6ICJXT1RSQUNBIiwKICAiZGVzY3JpcHRpb24iOiAiUmVjcnV0ZW1lbnQgb2ZmaWNpZWwgV09UUkFDQSBDYW5hZGEiLAogICJzdGFydF91cmwiOiAiL3dvdHJhY2EtYXBwLyIsCiAgInNjb3BlIjogIi93b3RyYWNhLWFwcC8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmZmZmYiLAogICJ0aGVtZV9jb2xvciI6ICIjRDUyQjFFIiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiaHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS81MTIvMTk3LzE5NzQzMC5wbmciLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3BuZyIKICAgIH0KICBdCn0K">
+<meta name="theme-color" content="#D80621">
 <style>
-*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI}
-body{margin:0;background:#f3f4f6}
-.top{background:#C8102E;color:white;padding:0;border-radius:0 0 28px 28px}
-.top-inner{padding:22px 20px 28px}
-.badge{background:rgba(255,255,255,0.18);display:inline-block;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:1px}
-.w-logo{background:white;color:#C8102E;width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:28px;float:right;margin-top:-8px}
-h1{margin:10px 0 4px;font-size:36px;font-weight:900;letter-spacing:0.5px}
-.sub{opacity:0.95;font-size:15px}
-.card-white{background:white;margin:14px;padding:14px;border-radius:14px;border:1px solid #f1c2c8}
-.card-white b{color:#C8102E}
-.card-white small{color:#b94a5a}
-.form-wrap{background:white;margin:14px;border-radius:18px;padding:18px;box-shadow:0 4px 18px rgba(0,0,0,0.06)}
-label{font-weight:700;font-size:14px;display:block;margin:14px 0 6px;color:#222}
-input,select{width:100%;padding:13px 14px;border-radius:12px;border:1.5px solid #e5e7eb;background:#f9fafb;font-size:15px;outline:none}
-input:focus,select:focus{border-color:#C8102E;background:white}
-.row{display:flex;gap:12px}
-.row>div{flex:1}
-.btn-whatsapp{display:block;background:#25D366;color:white;text-align:center;padding:15px;border-radius:12px;font-weight:900;text-decoration:none;margin-top:12px}
-.btn-pay{display:block;background:#C8102E;color:white;text-align:center;padding:16px;border-radius:12px;font-weight:900;text-decoration:none;margin-top:12px;border:none;width:100%;font-size:16px;cursor:pointer}
-.note{font-size:12px;color:#6b7280;text-align:center;margin-top:12px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f8f9fa;color:#222;line-height:1.6}
+header{background:linear-gradient(135deg,#D80621,#FF0000);color:white;text-align:center;padding:25px 15px}
+header h1{font-size:26px}
+header p{font-size:14px;margin-top:8px}
+.hero{background:white;margin:15px;border-radius:15px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,0.08);text-align:center}
+.badge{display:inline-block;background:#FFF3CD;color:#856404;padding:6px 12px;border-radius:20px;font-size:12px;margin:3px}
+section{background:white;margin:15px;border-radius:15px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,0.08)}
+h2{color:#D80621;margin-bottom:12px;font-size:19px;border-left:5px solid #D80621;padding-left:10px}
+ul{list-style:none}
+ul li{padding:7px 0;border-bottom:1px solid #eee;font-size:14px}
+ul li:before{content:"✅ "}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.card{border:1px solid #eee;border-radius:10px;padding:12px;text-align:center;background:#fdfdfd;font-size:13px}
+.card strong{display:block;margin-top:4px;color:#D80621}
+.btn{display:block;width:100%;background:#D80621;color:white;text-align:center;padding:16px;border-radius:12px;font-size:17px;font-weight:bold;text-decoration:none;margin-top:15px}
+.btn-green{background:#25D366}
+.alert{background:#FFF3CD;border-left:5px solid #FFC107;padding:10px;border-radius:8px;margin:10px 0;font-size:12px}
+footer{background:#111;color:#aaa;text-align:center;padding:20px;font-size:11px}
+input,select{width:100%;padding:12px;margin:8px 0 12px;border:1px solid #ccc;border-radius:8px}
 </style>
 </head>
 <body>
-<div class="top">
-<div class="top-inner">
-<div class="w-logo">W</div>
-<div class="badge">● CANADA 2026</div>
-<h1>WOTRACA</h1>
-<div class="sub">Programme Travail Canada Afrique</div>
-<div class="card-white" style="margin:18px 0 0 0">
-<b>Inscription officielle - Frais dossier 48000 FCFA</b><br>
-<small>Remplissez le formulaire complet pour recevoir votre lettre d acceptation par email reel.</small>
-</div>
-</div>
-</div>
+<header>
+<h1>🇨🇦 WOTRACA CANADA 2026</h1>
+<p>Votre projet Canada 100% accompagné</p>
+<p style="font-size:11px;opacity:0.9;margin-top:8px">⚠️ Agence privée - Non affiliée au gouvernement du Canada<br>Le visa est délivré uniquement par IRCC</p>
+</header>
 
-<div class="form-wrap">
-<label>Nom complet *</label>
-<input id="nom" placeholder="Ex: KOFFI Jean">
-
-<div class="row">
-<div><label>Telephone *</label><input id="tel" placeholder="+229..."></div>
-<div><label>Email *</label><input id="email" placeholder="votre@email.com"></div>
+<div class="hero">
+<span class="badge">📅 Inscriptions 2026</span>
+<span class="badge">✈️ Départs 2026-2027</span>
+<h2 style="border:none;color:#222">Rejoignez le Canada légalement</h2>
+<p style="font-size:14px">Accompagnement complet jusqu'à l'arrivée</p>
+<a href="#inscription" class="btn">S'INSCRIRE - 48.000 FCFA</a>
 </div>
 
-<div class="row">
-<div><label>Date naissance *</label><input id="dob" type="date"></div>
-<div><label>Lieu residence *</label><input id="lieu" value="Cotonou"></div>
+<section id="travaux">
+<h2>💼 Travaux & Métiers Qui Recrutent</h2>
+<div class="grid">
+<div class="card">🏗️<strong>BTP</strong>Maçon, Coffreur, Ferrailleur</div>
+<div class="card">🔧<strong>Technique</strong>Soudeur, Électricien</div>
+<div class="card">🚚<strong>Chauffeur</strong>Poids Lourd, Bus</div>
+<div class="card">🌾<strong>Agriculture</strong>Ouvrier, Élevage</div>
+<div class="card">👩‍⚕️<strong>Santé</strong>Aide-soignant</div>
+<div class="card">🍽️<strong>Restauration</strong>Cuisinier, Serveur</div>
+<div class="card">🧹<strong>Ménage</strong>Agent entretien</div>
+<div class="card">🏭<strong>Usine</strong>Manutentionnaire</div>
 </div>
+<div class="alert">⚠️ Aucun emploi garanti. Les offres dépendent de votre profil et des employeurs canadiens.</div>
+</section>
 
-<div class="row">
-<div><label>Nationalite</label><select id="nat"><option>Bénin</option><option>Togo</option><option>Sénégal</option><option>Côte d Ivoire</option><option>Cameroun</option><option>Autre</option></select></div>
-<div><label>Domaine</label><select id="domaine"><option>Batiment Cons</option><option>Soudure</option><option>Chauffeur</option><option>Agriculture</option><option>Restauration</option><option>Informatique</option><option>Menage</option></select></div>
-</div>
+<section id="garanties">
+<h2>🛡️ Garanties WOTRACA</h2>
+<ul>
+<li><strong>Dossier complet</strong> : CV format canadien, lettre, vérification docs</li>
+<li><strong>Préparation entretien</strong> : Coaching avec nos experts</li>
+<li><strong>Orientation logement</strong> : Liste logements à l'arrivée (aide, non inclus)</li>
+<li><strong>Suivi WhatsApp</strong> : +1 202 977 2153 jusqu'à l'arrivée</li>
+<li><strong>Transparence</strong> : Reçu FedaPay + contrat après paiement</li>
+<li><strong>Remboursement partiel</strong> si dossier non traité (hors frais FedaPay). Visa = décision IRCC uniquement.</li>
+</ul>
+</section>
 
-<label>Metier poste vise *</label>
-<input id="metier" placeholder="Ex: Soudeur, Chauffeur...">
+<section id="compagnie">
+<h2>🏢 À Propos de la Compagnie</h2>
+<p style="font-size:14px"><strong>WOTRACA</strong> est une agence d'accompagnement privée créée pour aider les Béninois et Africains de l'Ouest dans leur projet Canada.</p>
+<p style="font-size:13px;margin-top:10px"><strong>Nous ne sommes PAS :</strong></p>
+<ul>
+<li>Le gouvernement du Canada (IRCC)</li>
+<li>Une agence qui délivre des visas</li>
+<li>Une garantie de visa ou d'emploi</li>
+</ul>
+<p style="font-size:13px;margin-top:10px"><strong>Nous sommes :</strong> Une équipe d'orientation, d'information et de préparation de dossier.</p>
+<p style="font-size:13px;margin-top:10px">📍 Abomey-Calavi, Bénin<br>📱 WhatsApp: +1 202 977 2153<br>📧 wotraca.canada@gmail.com<br>🌐 Site officiel Canada: canada.ca/immigration</p>
+</section>
 
-<button class="btn-pay" id="payBtn">💳 Payer 48.000 FCFA - Valider dossier</button>
-<a class="btn-whatsapp" id="waBtn" style="display:none" target="_blank">📲 Etape 2: Envoyer dossier sur WhatsApp</a>
-<div class="note">Paiement sécurisé via FedaPay • Reçu instantané • Après paiement, envoi WhatsApp automatique</div>
-</div>
+<section id="inscription">
+<h2>🚀 Formulaire d'Inscription</h2>
+<p style="font-size:13px">Remplissez puis payez via FedaPay sécurisé</p>
+<label>Niveau d'étude</label>
+<select><option>CEP</option><option>BEPC</option><option>BAC</option><option>Licence</option><option>Master</option></select>
+<label>Avez-vous un passeport ?</label>
+<select><option>OUI valide</option><option>NON</option><option>En cours</option></select>
+<label>Métier souhaité</label>
+<select><option>Construction</option><option>Soudure</option><option>Chauffeur</option><option>Agriculture</option><option>Santé</option><option>Restauration</option><option>Ménage</option><option>Autre</option></select>
+<label>Nom complet</label>
+<input type="text" placeholder="Koudjo Brice">
+<label>WhatsApp</label>
+<input type="tel" placeholder="+229...">
+<a href="https://pay.fedapay.com/wotraca-2026" target="_blank" class="btn">💳 PAYER 48.000 FCFA - FEDAPAY</a>
+<p style="text-align:center;font-size:11px;margin-top:8px">MTN MoMo, Moov Money, Wave, Carte - Reçu instantané</p>
+<a href="https://wa.me/12029772153?text=Preuve%20paiement%2048000%20FCFA%20WOTRACA" class="btn btn-green">💬 Envoyer preuve WhatsApp</a>
+</section>
 
-<script>
-// CONFIG
-const WHATSAPP_NUMBER = "12029772153";
-const FEDAPAY_PUBLIC_KEY = "pk_live_6czquAqpFGQHKSVPkD7WDfkz";
-
-const $ = id => document.getElementById(id);
-function getFormData(){
- return {
-  nom: $('nom').value.trim(),
-  tel: $('tel').value.trim(),
-  email: $('email').value.trim(),
-  dob: $('dob').value,
-  lieu: $('lieu').value.trim(),
-  nat: $('nat').value,
-  domaine: $('domaine').value,
-  metier: $('metier').value.trim()
- };
-}
-function validate(){
- const d = getFormData();
- if(!d.nom || !d.tel || !d.email || !d.dob || !d.lieu || !d.metier){
-   alert("Remplis tous les champs * obligatoires");
-   return false;
- }
- return true;
-}
-
-$('payBtn').onclick = function(){
- if(!validate()) return;
- const d = getFormData();
- const msg = `🇨🇦 NOUVELLE CANDIDATURE WOTRACA CANADA 2026%0A%0A`+
- `Nom: ${encodeURIComponent(d.nom)}%0A`+
- `Tel: ${encodeURIComponent(d.tel)}%0A`+
- `Email: ${encodeURIComponent(d.email)}%0A`+
- `Naissance: ${encodeURIComponent(d.dob)}%0A`+
- `Residence: ${encodeURIComponent(d.lieu)}%0A`+
- `Nationalite: ${encodeURIComponent(d.nat)}%0A`+
- `Domaine: ${encodeURIComponent(d.domaine)}%0A`+
- `Metier vise: ${encodeURIComponent(d.metier)}%0A%0A`+
- `Frais: 48000 FCFA - PAYE via FedaPay`;
-
- const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
- $('waBtn').href = waLink;
- $('waBtn').style.display = 'block';
-
- // FedaPay Checkout - version corrigée
- try {
-   const checkout = FedaPay.init({
-     public_key: FEDAPAY_PUBLIC_KEY,
-     transaction: {
-       amount: 48000,
-       description: `WOTRACA Dossier - ${d.nom}`
-     },
-     currency: { iso: 'XOF' },
-     customer: {
-       email: d.email,
-       firstname: d.nom.split(' ')[0] || d.nom,
-       lastname: d.nom.split(' ').slice(1).join(' ') || 'WOTRACA',
-       phone_number: {
-         number: d.tel,
-         country: d.tel.startsWith('+1') ? 'US' : 'BJ'
-       }
-     },
-     onComplete: function(resp){
-       // Paiement réussi
-       if(resp && (resp.status === 'approved' || resp.reason === 'CHECKOUT_COMPLETED')){
-         alert("✅ Paiement 48.000 FCFA réussi !\nOuverture WhatsApp...");
-         window.open(waLink, '_blank');
-       }
-     }
-   });
-   checkout.open();
- } catch(e){
-   console.error(e);
-   // Si FedaPay bloque (clé, adblock), on ouvre WhatsApp quand même
-   alert("Paiement FedaPay en chargement... Si ça ne s'ouvre pas, clique sur le bouton vert WhatsApp en dessous.\nErreur: " + e.message);
-   window.open(waLink, '_blank');
- }
-};
-
-if('serviceWorker' in navigator){ navigator.serviceWorker.register('./sw.js'); }
-</script>
+<footer>
+<p><strong>WOTRACA CANADA 2026</strong><br>Agence privée - Non affiliée à IRCC<br>Vérifiez toujours sur canada.ca/immigration</p>
+<p style="margin-top:8px">© 2026 WOTRACA - Abomey-Calavi</p>
+</footer>
 <script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
 </html>
