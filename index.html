@@ -12,6 +12,7 @@
         .bg-canada-red { background-color: #C8102E; }
         .text-canada-red { color: #C8102E; }
         .border-canada-red { border-color: #C8102E; }
+        .bg-navy-dark { background-color: #0F172A; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans pb-20">
@@ -85,7 +86,7 @@
                 <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
                     <i class="fa-solid fa-passport text-canada-red text-base mb-1"></i>
                     <h3 class="font-bold text-gray-800">Immigration</h3>
-                    <p class="text-gray-500 mt-1">EIMT, CAQ, Permis de travail, Visa, Biométrie & Visite médicale.</p>
+                    <p class="text-gray-500 mt-1">EIMT, CAQ, Permis de travail, Visa (VRT), Biométrie & Visite médicale.</p>
                 </div>
                 <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
                     <i class="fa-solid fa-plane-departure text-canada-red text-base mb-1"></i>
@@ -165,11 +166,11 @@
             </div>
         </section>
 
-        <!-- Formulaire de Vérification d'Éligibilité & Passeport -->
+        <!-- Formulaire de Vérification d'Éligibilité -->
         <section class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
             <h2 class="text-lg font-bold text-gray-900 flex items-center space-x-2 mb-2">
                 <i class="fa-solid fa-user-check text-canada-red"></i>
-                <span>Test d'Éligibilité & Candidature</span>
+                <span>Test d'Éligibilité Rapide</span>
             </h2>
             <form id="eligibilityForm" class="space-y-3 text-xs mt-3">
                 <div>
@@ -188,17 +189,9 @@
                     <label class="block font-semibold text-gray-700 mb-1">Métier Souhaité</label>
                     <input type="text" id="job" placeholder="Ex: Électricien, Cuisinier..." required class="w-full p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:outline-none">
                 </div>
-                <div>
-                    <label class="block font-semibold text-gray-700 mb-1">Disposez-vous d'un Passeport valide ?</label>
-                    <select id="passport" class="w-full p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:outline-none">
-                        <option value="Oui">Oui, passeport valide</option>
-                        <option value="En cours">En cours de renouvellement / d'établissement</option>
-                        <option value="Non">Non, pas encore</option>
-                    </select>
-                </div>
                 <button type="submit" class="w-full bg-canada-red text-white font-bold py-3 rounded-xl shadow-lg hover:bg-red-700 transition flex justify-center items-center space-x-2">
-                    <i class="fa-solid fa-credit-card text-lg"></i>
-                    <span>Procéder au paiement des frais de dossier</span>
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Soumettre ma candidature via WhatsApp</span>
                 </button>
             </form>
         </section>
@@ -210,12 +203,22 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Redirection automatique vers le lien de paiement FedaPay -->
+    <!-- Script de redirection dynamique WhatsApp -->
     <script>
         document.getElementById('eligibilityForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Redirection vers le lien FedaPay actif corrigé
-            window.location.href = "https://me.fedapay.com/wotraca-frais-dossier";
+            const age = document.getElementById('age').value;
+            const language = document.getElementById('language').value;
+            const job = document.getElementById('job').value;
+
+            const text = `Bonjour WOTRACA ! Je souhaite poser ma candidature pour le Canada.%0A%0A` +
+                         `*Détails du candidat :*%0A` +
+                         `- *Âge :* ${age} ans%0A` +
+                         `- *Langue :* ${language}%0A` +
+                         `- *Poste recherché :* ${job}%0A%0A` +
+                         `Merci de m'indiquer la procédure d'inscription.`;
+
+            window.open(`https://wa.me/12029772153?text=${text}`, '_blank');
         });
     </script>
 </body>
