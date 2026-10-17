@@ -3,11 +3,21 @@
   "name": "WOTRACA - Work and Travel Canada",
   "short_name": "WOTRACA",
   "description": "Work and Travel Canada - Candidature officielle, aide passeport, paiement FedaPay",
-  "start_url": "/",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#C8102E",
   "theme_color": "#C8102E",
   "orientation": "portrait",
+  "categories": [
+    "travel",
+    "business",
+    "lifestyle"
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
   "icons": [
     {
       "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
@@ -23,6 +33,28 @@
       "type": "image/png",
       "form_factor": "narrow",
       "label": "WOTRACA Canada"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "WOTRACA Canada Desktop"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Candidature WOTRACA",
+      "short_name": "Postuler",
+      "description": "Remplir le formulaire d'éligibilité WOTRACA",
+      "url": "./index.html",
+      "icons": [
+        {
+          "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }
