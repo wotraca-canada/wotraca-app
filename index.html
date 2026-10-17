@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<head><link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#C8102E">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WOTRACA - Work and Travel Canada</title>
@@ -345,6 +347,11 @@
                 }
             }, 1000);
         });
+    </script><script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+    }
     </script>
+    
 </body>
 </html>
