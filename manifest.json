@@ -8,9 +8,15 @@
   "start_url": "https://wotraca-canada.github.io/wotraca-app/index.html",
   "scope": "https://wotraca-canada.github.io/wotraca-app/",
   "display": "standalone",
+  "display_override": [
+    "standalone",
+    "browser",
+    "minimal-ui"
+  ],
   "background_color": "#C8102E",
   "theme_color": "#C8102E",
   "orientation": "portrait",
+  "iarc_rating_id": "e58c1f3a-1a88-4bb9-8806-039c4d924190",
   "categories": [
     "travel",
     "business",
@@ -38,14 +44,14 @@
       "sizes": "512x512",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "WOTRACA Mobile"
+      "label": "WOTRACA Mobile Application"
     },
     {
       "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
       "sizes": "512x512",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "WOTRACA Desktop"
+      "label": "WOTRACA Desktop Application"
     }
   ],
   "shortcuts": [
@@ -57,10 +63,19 @@
       "icons": [
         {
           "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
-          "sizes": "192x192",
+          "sizes": "512x512",
           "type": "image/png"
         }
       ]
     }
-  ]
+  ],
+  "share_target": {
+    "action": "https://wotraca-canada.github.io/wotraca-app/index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
 }
