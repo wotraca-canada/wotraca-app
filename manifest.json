@@ -1,18 +1,134 @@
 {
+  "id": "/wotraca-app/",
   "name": "WOTRACA - Work and Travel Canada",
   "short_name": "WOTRACA",
   "description": "Work and Travel Canada - Candidature officielle, aide passeport, paiement FedaPay",
+  "lang": "fr-FR",
+  "dir": "ltr",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
+  "display_override": [
+    "standalone",
+    "browser",
+    "minimal-ui",
+    "window-controls-overlay",
+    "tabbed"
+  ],
   "background_color": "#C8102E",
   "theme_color": "#C8102E",
   "orientation": "portrait",
+  "iarc_rating_id": "e58c1f3a-1a88-4bb9-8806-039c4d924190",
+  "categories": [
+    "travel",
+    "business",
+    "lifestyle",
+    "productivity"
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
   "icons": [
     {
       "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "screenshots": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "WOTRACA Mobile Application"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "WOTRACA Desktop Application"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Candidature WOTRACA",
+      "short_name": "Postuler",
+      "description": "Remplir le formulaire d'éligibilité WOTRACA",
+      "url": "./index.html",
+      "icons": [
+        {
+          "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "./index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+wotraca",
+      "url": "./index.html?req=%s"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "./index.html",
+      "accept": {
+        "text/plain": [".txt"]
+      }
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "widgets": [
+    {
+      "name": "WOTRACA Status",
+      "short_name": "WOTRACA",
+      "description": "Suivi de candidature WOTRACA Canada",
+      "tag": "wotraca-widget",
+      "template": "wotraca-template",
+      "ms_ac_template": "./widget.json",
+      "data": "./widget-data.json",
+      "type": "application/json",
+      "screenshots": [
+        {
+          "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "label": "WOTRACA Widget"
+        }
+      ],
+      "icons": [
+        {
+          "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "note_taking": {
+    "new_note_url": "./index.html"
+  }
 }
