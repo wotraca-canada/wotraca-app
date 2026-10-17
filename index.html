@@ -1,169 +1,350 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><style>
-@font-face {
-  font-family: "Optimistic";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Optimistic Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
-}
-:where(html) {
-  font-family: "Optimistic", system-ui, sans-serif;
-}
-:where(code, pre, kbd, samp) {
-  font-family: "Optimistic Mono", ui-monospace, monospace;
-}
-</style>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="-VS4amqCI3QQU9kSHfK7x0CTINeZ9IvhPZQ5tFi-pZk" />
-<title>WOTRACA Canada 2026 | De l'UEMOA & Afrique de l'Ouest jusqu'au Canada</title>
-<meta name="description" content="WOTRACA vous accompagne de votre pays UEMOA (Bénin, Burkina Faso, Côte d'Ivoire, Sénégal, Togo, Mali, Niger) et CEDEAO jusqu'au Canada. Inscription 48.000 FCFA, autres frais pris en charge par la compagnie et remboursés sur salaire.">
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="WOTRACA Canada 2026 - De l'UEMOA jusqu'au Canada 🇨🇦">
-<link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIldPVFJBQ0EgQ2FuYWRhIiwKICAic2hvcnRfbmFtZSI6ICJXT1RSQUNBIiwKICAiZGVzY3JpcHRpb24iOiAiUmVjcnV0ZW1lbnQgb2ZmaWNpZWwgV09UUkFDQSBDYW5hZGEiLAogICJzdGFydF91cmwiOiAiL3dvdHJhY2EtYXBwLyIsCiAgInNjb3BlIjogIi93b3RyYWNhLWFwcC8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmZmZmYiLAogICJ0aGVtZV9jb2xvciI6ICIjRDUyQjFFIiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiaHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS81MTIvMTk3LzE5NzQzMC5wbmciLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3BuZyIKICAgIH0KICBdCn0K">
-<meta name="theme-color" content="#D80621">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f8f9fa;color:#222;line-height:1.6}
-header{background:linear-gradient(135deg,#D80621,#FF0000);color:white;text-align:center;padding:26px 12px}
-.hero{background:white;margin:12px;border-radius:15px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,0.07);text-align:center}
-section{background:white;margin:12px;border-radius:15px;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,0.07)}
-h2{color:#D80621;margin-bottom:10px;font-size:17px;border-left:5px solid #D80621;padding-left:10px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
-.card{border:1px solid #eee;border-radius:12px;padding:11px;text-align:center;background:#fff;font-size:11px}
-.card strong{display:block;color:#D80621;margin-top:2px;font-size:12px}
-.btn{display:block;width:100%;background:#D80621;color:white;text-align:center;padding:15px;border-radius:12px;font-size:15px;font-weight:bold;text-decoration:none;margin-top:12px}
-.btn-green{background:#25D366}
-ul{list-style:none}
-ul li{padding:6px 0;border-bottom:1px solid #f0f0f0;font-size:12px}
-ul li:before{content:"✓ ";color:#28a745;font-weight:bold}
-.note{font-size:10px;color:#888;text-align:center;margin-top:8px}
-footer{background:#111;color:#999;text-align:center;padding:18px;font-size:10px;line-height:1.4}
-input,select{width:100%;padding:11px;margin:7px 0 11px;border:1px solid #ccc;border-radius:8px}
-.badge{display:inline-block;background:#FFE8E9;color:#D80621;padding:4px 8px;border-radius:20px;font-size:10px;font-weight:bold;margin:2px}
-.flag-grid{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:10px 0}
-.flag{border:1px solid #eee;border-radius:20px;padding:3px 8px;font-size:10px;background:#fff}
-details{margin:8px 0;border:1px solid #eee;border-radius:8px;padding:10px;background:#fff}
-summary{font-weight:bold;color:#D80621;cursor:pointer;font-size:13px}
-.doc-box{background:#f0f8ff;border:1px dashed #007bff;border-radius:10px;padding:12px;margin:8px 0;font-size:12px}
-.faq-highlight{background:#FFF3E0;border:2px solid #FF9800;border-radius:10px;padding:14px;margin:10px 0}
-</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOTRACA - Work and Travel Canada</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .bg-canada-red { background-color: #C8102E; }
+        .text-canada-red { color: #C8102E; }
+        .border-canada-red { border-color: #C8102E; }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans pb-20">
 
-<header>
-<h1>🇨🇦 WOTRACA CANADA 2026</h1>
-<p style="font-size:16px;font-weight:bold;margin-top:6px">De l'UEMOA & Afrique de l'Ouest jusqu'au Canada</p>
-<p style="font-size:11px;margin-top:6px">8 Pays UEMOA + 15 Pays CEDEAO • 48.000 FCFA seulement au départ</p>
-</header>
+    <!-- En-tête / Header -->
+    <header class="bg-canada-red text-white shadow-lg sticky top-0 z-40">
+        <div class="max-w-md mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-leaf text-2xl"></i>
+                <span class="font-bold text-xl tracking-wider">WOTRACA</span>
+            </div>
+            <a href="https://wa.me/12029772153" target="_blank" class="bg-white text-canada-red font-bold px-3 py-1.5 rounded-full text-xs shadow hover:bg-gray-100 transition flex items-center space-x-1">
+                <i class="fa-brands fa-whatsapp text-green-600 text-sm"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </header>
 
-<div class="hero">
-<span class="badge">🔥 INSCRIPTIONS UEMOA 2026</span>
-<h2 style="border:none;color:#222;text-align:center;font-size:18px;margin-top:10px">Le Canada recrute en Afrique de l'Ouest</h2>
-<p style="font-size:12px;color:#555">48.000 FCFA seulement pour démarrer. Le reste est pris en charge par WOTRACA.</p>
-<div class="flag-grid">
-<span class="flag">🇧🇯 Bénin</span><span class="flag">🇧🇫 Burkina</span><span class="flag">🇨🇮 Côte d'Ivoire</span><span class="flag">🇸🇳 Sénégal</span><span class="flag">🇹🇬 Togo</span><span class="flag">🇲🇱 Mali</span><span class="flag">🇳🇪 Niger</span><span class="flag">🇬🇼 Bissau</span>
-</div>
-<a href="#inscription" class="btn">S'INSCRIRE - 48.000 FCFA SEULEMENT</a>
-<p class="note">Le reste pris en charge par la compagnie - Remboursé sur salaire au Canada</p>
-</div>
+    <main class="max-w-md mx-auto px-4 pt-4 space-y-6">
 
-<section id="travaux">
-<h2>💼 Métiers Qui Recrutent au Canada</h2>
-<p style="font-size:11px;color:#666">Tous profils - Ensemble - Nos partenaires canadiens recrutent :</p>
-<div class="grid">
-<div class="card">🏗️<strong>BTP & Construction</strong>Maçon, Coffreur</div>
-<div class="card">🔧<strong>Technique</strong>Soudeur, Électricien</div>
-<div class="card">🚚<strong>Chauffeur</strong>Poids Lourd, Bus</div>
-<div class="card">🌾<strong>Agriculture</strong>Ouvrier, Élevage</div>
-<div class="card">👩‍⚕️<strong>Santé & Social</strong>Aide-soignant</div>
-<div class="card">🍽️<strong>Restauration</strong>Cuisinier, Serveur</div>
-<div class="card">🧹<strong>Hôtellerie & Ménage</strong>Agent entretien</div>
-<div class="card">🏭<strong>Usine & Logistique</strong>Manutention</div>
-<div class="card">👶<strong>Services</strong>Garde enfants</div>
-<div class="card">🛒<strong>Commerce</strong>Vendeur, Caissier</div>
-</div>
-</section>
+        <!-- Bannière d'Accueil -->
+        <section class="bg-gradient-to-br from-red-700 to-red-900 text-white rounded-2xl p-6 shadow-xl text-center relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 opacity-10 text-9xl">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+            <span class="bg-white/20 text-xs font-semibold uppercase px-3 py-1 rounded-full backdrop-blur-sm">Programme Spécial Canada</span>
+            <h1 class="text-2xl font-black mt-3 leading-tight uppercase">Voyagez D'abord,<br>Payez Après !</h1>
+            <p class="text-sm mt-2 text-red-100">Prise en charge intégrale à 100% de vos frais d'immigration, de vos billets et de votre installation.</p>
+            <div class="mt-4 pt-4 border-t border-white/20 flex justify-around text-center">
+                <div>
+                    <p class="text-xs text-red-200">Avance requise</p>
+                    <p class="text-lg font-bold">0 FCFA / $0</p>
+                </div>
+                <div class="border-r border-white/20"></div>
+                <div>
+                    <p class="text-xs text-red-200">Remboursement</p>
+                    <p class="text-lg font-bold">30% / mois</p>
+                </div>
+            </div>
+        </section>
 
-<section id="financement">
-<h2>💰 Comment ça marche ? 48.000 FCFA seulement</h2>
-<div class="faq-highlight">
-<p style="font-size:13px;font-weight:bold;color:#E65100">✅ 48.000 FCFA = Frais d'inscription et accompagnement dossier complet</p>
-<p style="font-size:13px;margin-top:10px">✅ <strong>Les autres frais sont pris en charge complètement par la compagnie</strong> :<br>
-- Frais de visa IRCC<br>
-- Billet d'avion<br>
-- Frais de dossier employeur<br>
-- Assurance de base<br><br>
-<strong>💳 Et remboursés seulement après, en partie depuis les salaires au Canada</strong>, selon contrat d'engagement (petites retenues mensuelles sur salaire, pas de pression).</p>
-<p style="font-size:11px;margin-top:10px;color:#666">Vous partez sans vous endetter. La compagnie avance, vous remboursez tranquillement une fois au Canada et payé.</p>
-</div>
-</section>
+        <!-- Section Avantages -->
+        <section class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 flex items-center space-x-2 mb-3">
+                <i class="fa-solid fa-hand-holding-dollar text-canada-red"></i>
+                <span>Comment ça fonctionne ?</span>
+            </h2>
+            <div class="space-y-3 text-xs text-gray-600">
+                <div class="flex items-start space-x-3 bg-red-50 p-3 rounded-xl">
+                    <div class="bg-canada-red text-white p-2 rounded-lg font-bold">1</div>
+                    <p><strong class="text-gray-900">Préfinancement Total :</strong> La compagnie WOTRACA finance l'intégralité de votre dossier d'immigration et votre billet d'avion avant votre départ.</p>
+                </div>
+                <div class="flex items-start space-x-3 bg-blue-50 p-3 rounded-xl">
+                    <div class="bg-blue-900 text-white p-2 rounded-lg font-bold">2</div>
+                    <p><strong class="text-gray-900">Arrivée & Prise de poste :</strong> Vous commencez votre travail au Canada et percevez votre salaire mensuel.</p>
+                </div>
+                <div class="flex items-start space-x-3 bg-green-50 p-3 rounded-xl">
+                    <div class="bg-green-700 text-white p-2 rounded-lg font-bold">3</div>
+                    <p><strong class="text-gray-900">Prélèvement Doux :</strong> Remboursement automatique de 30% chaque fin de mois sur votre salaire jusqu'à extinction totale de la somme.</p>
+                </div>
+            </div>
+        </section>
 
-<section id="faq">
-<h2>❓ Questions Fréquentes UEMOA</h2>
+        <!-- Frais & Papiers Pris en Charge -->
+        <section class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 flex items-center space-x-2 mb-4">
+                <i class="fa-solid fa-file-contract text-canada-red"></i>
+                <span>Frais Pris en Charge à 100%</span>
+            </h2>
+            <div class="grid grid-cols-2 gap-3 text-xs">
+                <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+                    <i class="fa-solid fa-passport text-canada-red text-base mb-1"></i>
+                    <h3 class="font-bold text-gray-800">Immigration</h3>
+                    <p class="text-gray-500 mt-1">EIMT, CAQ, Permis de travail, Visa, Biométrie & Visite médicale.</p>
+                </div>
+                <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+                    <i class="fa-solid fa-plane-departure text-canada-red text-base mb-1"></i>
+                    <h3 class="font-bold text-gray-800">Voyage & Transport</h3>
+                    <p class="text-gray-500 mt-1">Billet d'avion aller, taxes d'aéroport et transfert à l'arrivée.</p>
+                </div>
+                <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+                    <i class="fa-solid fa-house-user text-canada-red text-base mb-1"></i>
+                    <h3 class="font-bold text-gray-800">Hébergement</h3>
+                    <p class="text-gray-500 mt-1">Premier logement pris en charge et frais d'installation avancés.</p>
+                </div>
+                <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+                    <i class="fa-solid fa-shield-halved text-canada-red text-base mb-1"></i>
+                    <h3 class="font-bold text-gray-800">Assurances</h3>
+                    <p class="text-gray-500 mt-1">Assurance voyage et couverture médicale internationale initiale.</p>
+                </div>
+            </div>
+        </section>
 
-<details open style="border:2px solid #FF9800;background:#FFF8E0">
-<summary style="color:#E65100">▼ 48.000 FCFA c'est tout ?</summary>
-<p style="font-size:13px;margin-top:8px;line-height:1.5">
-<strong>Oui, 48.000 FCFA c'est tout ce que vous payez au départ depuis votre pays.</strong><br><br>
-C'est les frais d'inscription et d'accompagnement complet du dossier (CV canadien, lettre, vérification, coaching).<br><br>
-<strong>Les autres frais sont pris en charge complètement par la compagnie et remboursés seulement après, en partie depuis les salaires au Canada :</strong><br>
-✓ Frais de visa IRCC pris en charge<br>
-✓ Billet d'avion pris en charge<br>
-✓ Frais employeur pris en charge<br>
-✓ Remboursement en petites tranches sur votre salaire une fois au Canada, selon contrat transparent signé avant départ.<br><br>
-Vous ne devez pas avoir une grosse somme pour partir.
-</p>
-</details>
+        <!-- Catalogue des Métiers Disponibles -->
+        <section class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 flex items-center space-x-2 mb-3">
+                <i class="fa-solid fa-briefcase text-canada-red"></i>
+                <span>Postes Disponibles</span>
+            </h2>
+            <p class="text-xs text-gray-500 mb-3">Sélectionnez votre domaine professionnel :</p>
+            
+            <div class="space-y-2 text-xs">
+                <details class="bg-gray-50 rounded-xl p-3 border border-gray-100 group">
+                    <summary class="font-bold text-gray-800 cursor-pointer flex justify-between items-center">
+                        <span><i class="fa-solid fa-helmet-safety text-amber-600 mr-2"></i>Bâtiment & Construction</span>
+                        <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <ul class="mt-2 pl-6 list-disc space-y-1 text-gray-600">
+                        <li>Maçon / Coffreur</li>
+                        <li>Électricien du bâtiment</li>
+                        <li>Ingénieur BTP & Surveillance de chantier</li>
+                    </ul>
+                </details>
 
-<details><summary>Je n'ai pas de passeport, possible ?</summary><p style="font-size:12px;margin-top:6px">Oui ! Vous pouvez vous inscrire sans passeport. On vous aide à le faire après.</p></details>
-<details><summary>Je n'ai pas de diplôme, possible ?</summary><p style="font-size:12px;margin-top:6px">Oui ! Beaucoup de métiers ne demandent pas de diplôme au Canada.</p></details>
-<details><summary>Je suis au Togo / Sénégal / Burkina... vous prenez ?</summary><p style="font-size:12px;margin-top:6px">OUI ! On couvre les 8 pays UEMOA et tous les pays CEDEAO. Inscription 100% en ligne.</p></details>
-<details><summary>Comment se passe le remboursement sur salaire ?</summary><p style="font-size:12px;margin-top:6px">Après votre arrivée et prise de poste au Canada, une petite partie de votre salaire est retenue chaque mois pour rembourser les frais avancés (visa, billet). Montant et durée écrits noir sur blanc dans le contrat avant départ. Pas de surprise.</p></details>
-</section>
+                <details class="bg-gray-50 rounded-xl p-3 border border-gray-100 group">
+                    <summary class="font-bold text-gray-800 cursor-pointer flex justify-between items-center">
+                        <span><i class="fa-solid fa-laptop-code text-blue-600 mr-2"></i>Administration, Tertiaire & IT</span>
+                        <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <ul class="mt-2 pl-6 list-disc space-y-1 text-gray-600">
+                        <li>Secrétaire de direction</li>
+                        <li>Gestionnaire de réseau & communications</li>
+                        <li>Développeur Web / Logiciel</li>
+                        <li>Agent de sécurité administrative & surveillance</li>
+                    </ul>
+                </details>
 
-<section id="compagnie">
-<h2>🏢 WOTRACA - Spécialiste UEMOA & CEDEAO</h2>
-<p style="font-size:12px">Agence privée pour ressortissants UEMOA et Afrique de l'Ouest. De votre pays jusqu'au Canada, avec système de prise en charge.</p>
-<p style="font-size:11px;margin-top:8px;background:#FFF8E1;padding:10px;border-radius:8px">
-<strong>UEMOA (8) :</strong> Bénin • Burkina Faso • Côte d'Ivoire • Guinée-Bissau • Mali • Niger • Sénégal • Togo<br>
-<strong>CEDEAO :</strong> + Guinée • Ghana • Nigeria • Libéria • Sierra Leone • Gambie • Cap-Vert
-</p>
-</section>
+                <details class="bg-gray-50 rounded-xl p-3 border border-gray-100 group">
+                    <summary class="font-bold text-gray-800 cursor-pointer flex justify-between items-center">
+                        <span><i class="fa-solid fa-truck-front text-green-600 mr-2"></i>Transport & Logistique</span>
+                        <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <ul class="mt-2 pl-6 list-disc space-y-1 text-gray-600">
+                        <li>Transporteur / Chauffeur Poids Lourd</li>
+                        <li>Conducteur de véhicules légers et engins</li>
+                    </ul>
+                </details>
 
-<section id="inscription">
-<h2>🚀 Inscription UEMOA 2026 - 48.000 FCFA</h2>
-<p style="font-size:12px;color:#D80621;font-weight:bold">Seulement 48.000F au départ, le reste pris en charge par la compagnie !</p>
-<label>Pays d'origine *</label>
-<select style="font-weight:bold">
-<option>Choisir...</option>
-<optgroup label="UEMOA"><option>🇧🇯 Bénin</option><option>🇧🇫 Burkina Faso</option><option>🇨🇮 Côte d'Ivoire</option><option>🇬🇼 Guinée-Bissau</option><option>🇲🇱 Mali</option><option>🇳🇪 Niger</option><option>🇸🇳 Sénégal</option><option>🇹🇬 Togo</option></optgroup>
-<optgroup label="Autres CEDEAO"><option>🇬🇳 Guinée</option><option>🇬🇭 Ghana</option><option>🇳🇬 Nigeria</option></optgroup>
-</select>
-<label>Métier souhaité</label>
-<select><option>BTP / Construction</option><option>Soudure / Technique</option><option>Chauffeur</option><option>Santé / Social</option><option>Restauration / Hôtellerie</option><option>Usine / Commerce</option><option>Autre</option></select>
-<label>Nom complet</label><input type="text" placeholder="Ex: Koudjo Brice">
-<label>WhatsApp</label><input type="tel" placeholder="+229 / +225 / +221...">
-<a href="https://pay.fedapay.com/wotraca-2026" target="_blank" class="btn">💳 PAYER 48.000 FCFA - DÉMARRER</a>
-<p class="note">48.000F seulement au départ. Autres frais pris en charge par compagnie, remboursés sur salaire Canada<br>MTN MoMo • Moov • Orange Money • Wave • Visa</p>
-<a href="https://wa.me/12029772153?text=Bonjour%20WOTRACA%2C%20j'ai%20pay%C3%A9%2048.000F%20-%20question%20prise%20en%20charge" class="btn btn-green">💬 WhatsApp : Envoyer preuve</a>
-</section>
+                <details class="bg-gray-50 rounded-xl p-3 border border-gray-100 group">
+                    <summary class="font-bold text-gray-800 cursor-pointer flex justify-between items-center">
+                        <span><i class="fa-solid fa-scissors text-purple-600 mr-2"></i>Services, Artisanat & Restauration</span>
+                        <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <ul class="mt-2 pl-6 list-disc space-y-1 text-gray-600">
+                        <li>Couturier / Couturière</li>
+                        <li>Cuisinier / Cuisinière</li>
+                        <li>Femme de ménage / Agent d'entretien</li>
+                        <li>Garde d'enfants (Nanny) / Aide familiale</li>
+                    </ul>
+                </details>
+            </div>
+        </section>
 
-<footer>
-<p><strong>WOTRACA 2026 - UEMOA & Afrique de l'Ouest → Canada</strong><br>
-48.000 FCFA inscription. Autres frais (visa, billet) pris en charge par compagnie, remboursés en partie sur salaire selon contrat.<br>
-Service privé zone UEMOA & CEDEAO<br>
-© 2026 WOTRACA International</p>
-</footer>
+        <!-- Formulaire de Candidature -->
+        <section class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 flex items-center space-x-2 mb-2">
+                <i class="fa-solid fa-user-check text-canada-red"></i>
+                <span>Test d'Éligibilité & Candidature</span>
+            </h2>
+            <form id="eligibilityForm" class="space-y-3 text-xs mt-3">
+                <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Nom & Prénom</label>
+                    <input type="text" id="fullname" placeholder="Ex: Koudjo" required class="w-full p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Adresse E-mail</label>
+                    <input type="email" id="email" placeholder="Ex: exemple@gmail.com" required class="w-full p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Votre Âge (Requis : 26 à 52 ans)</label>
+                    <input type="number" id="age" min="18" max="70" placeholder="Ex: 34" required class="w-full p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Langue Parlée</label>
+                    <select id="language" class="w-full p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:outline-none">
+                        <option value="Français">Français (Petit à Grand niveau)</option>
+                        <option value="Anglais">Anglais (Petit à Grand niveau)</option>
+                        <option value="Espagnol">Espagnol (Petit à Grand niveau)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Métier Souhaité</label>
+                    <input type="text" id="job" placeholder="Ex: Cuisinier / Cuisinière" required class="w-full p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block font-semibold text-gray-700 mb-1">Disposez-vous d'un Passeport valide ?</label>
+                    <select id="passport" class="w-full p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:outline-none">
+                        <option value="Oui">Oui, passeport valide</option>
+                        <option value="En cours">En cours de renouvellement / d'établissement</option>
+                        <option value="Non">Non, pas encore</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-canada-red text-white font-bold py-3 rounded-xl shadow-lg hover:bg-red-700 transition flex justify-center items-center space-x-2">
+                    <i class="fa-solid fa-paper-plane text-lg"></i>
+                    <span>Soumettre ma candidature</span>
+                </button>
+            </form>
+        </section>
 
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+    </main>
+
+    <!-- POP-UP MODALE DE VÉRIFICATION (30 SECONDES) -->
+    <div id="analysisModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center space-y-5 shadow-2xl relative">
+            
+            <!-- Icône Sablier -->
+            <div class="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto border border-amber-200">
+                <i class="fa-solid fa-hourglass-half text-amber-500 text-3xl animate-pulse"></i>
+            </div>
+
+            <!-- Titres -->
+            <div>
+                <h3 class="text-lg font-black text-gray-900 leading-tight">Votre candidature est en cours d'analyse...</h3>
+                <p class="text-xs text-gray-600 mt-2">Merci <strong id="modalCandidateName" class="text-gray-900"></strong> ! Vos informations ont bien été reçues. Veuillez patienter <span class="text-canada-red font-bold">30 secondes</span> sur l'application. Notre système vérifie votre éligibilité.</p>
+            </div>
+
+            <!-- Barre de Progression -->
+            <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100 text-left space-y-2">
+                <div class="flex justify-between text-xs font-bold text-canada-red">
+                    <span><i class="fa-regular fa-clock mr-1"></i>PROGRESSION <span id="progressPercent">0%</span></span>
+                    <span><span id="timeLeft">30S</span> RESTANTS</span>
+                </div>
+                <div class="w-full bg-gray-200 h-2.5 rounded-full overflow-hidden">
+                    <div id="progressBar" class="bg-canada-red h-full w-0 transition-all duration-300"></div>
+                </div>
+                <p id="stepStatus" class="text-[11px] text-gray-500 flex items-center mt-1">
+                    <i class="fa-regular fa-clock text-canada-red mr-1.5"></i>Vérification des postes disponibles...
+                </p>
+            </div>
+
+            <!-- Carte Récapitulative du Candidat -->
+            <div class="grid grid-cols-2 gap-2 text-left text-xs">
+                <div class="bg-blue-50/60 border border-blue-100 p-2.5 rounded-xl">
+                    <span class="text-[10px] uppercase font-bold text-blue-600 tracking-wider">CANDIDAT</span>
+                    <p id="cardName" class="font-bold text-gray-900 truncate"></p>
+                    <p id="cardEmail" class="text-[10px] text-gray-500 truncate"></p>
+                </div>
+                <div class="bg-emerald-50/60 border border-emerald-100 p-2.5 rounded-xl">
+                    <span class="text-[10px] uppercase font-bold text-emerald-600 tracking-wider">POSTE VISÉ</span>
+                    <p id="cardJob" class="font-bold text-gray-900 truncate"></p>
+                    <p class="text-[10px] text-gray-500 truncate">Secteur Sélectionné</p>
+                </div>
+            </div>
+
+            <!-- Bouton de blocage / Redirection -->
+            <div>
+                <button id="payButton" disabled class="w-full bg-gray-200 text-gray-500 font-bold py-3 rounded-xl text-xs flex justify-center items-center space-x-2 cursor-not-allowed transition-all">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    <span id="payButtonText">VEUILLEZ PATIENTER 30S — BLOQUÉ...</span>
+                </button>
+                <p class="text-[10px] text-gray-400 mt-2">Ne fermez pas l'application • Analyse automatique 30 secondes exactement</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bouton WhatsApp Flottant -->
+    <a href="https://wa.me/12029772153" target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-green-600 transition z-40">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPT DE CHRONOMÈTRE ET ANALYSE DYNAMIQUE -->
+    <script>
+        document.getElementById('eligibilityForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Récupération des données du formulaire
+            const name = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const job = document.getElementById('job').value;
+
+            // Remplissage de la modale
+            document.getElementById('modalCandidateName').innerText = name;
+            document.getElementById('cardName').innerText = name;
+            document.getElementById('cardEmail').innerText = email;
+            document.getElementById('cardJob').innerText = job;
+
+            // Affichage de la fenêtre Pop-up
+            const modal = document.getElementById('analysisModal');
+            modal.classList.remove('hidden');
+
+            // Initialisation du compte à rebours 30s
+            let totalTime = 30;
+            let currentTime = 0;
+            const progressBar = document.getElementById('progressBar');
+            const progressPercent = document.getElementById('progressPercent');
+            const timeLeft = document.getElementById('timeLeft');
+            const stepStatus = document.getElementById('stepStatus');
+            const payButton = document.getElementById('payButton');
+            const payButtonText = document.getElementById('payButtonText');
+
+            const interval = setInterval(() => {
+                currentTime++;
+                let percentage = Math.round((currentTime / totalTime) * 100);
+                let remaining = totalTime - currentTime;
+
+                // Mise à jour visuelle
+                progressBar.style.width = percentage + '%';
+                progressPercent.innerText = percentage + '%';
+                timeLeft.innerText = remaining + 'S';
+                payButtonText.innerText = `VEUILLEZ PATIENTER ${remaining}S — BLOQUÉ...`;
+
+                // Messages d'étape dynamique
+                if (percentage < 35) {
+                    stepStatus.innerHTML = '<i class="fa-regular fa-clock text-canada-red mr-1.5"></i>Vérification des postes disponibles...';
+                } else if (percentage < 70) {
+                    stepStatus.innerHTML = '<i class="fa-regular fa-clock text-canada-red mr-1.5"></i>Analyse de la validité du passeport...';
+                } else {
+                    stepStatus.innerHTML = '<i class="fa-regular fa-clock text-canada-red mr-1.5"></i>Validation du dossier préfinancé WOTRACA...';
+                }
+
+                // Fin des 30 secondes
+                if (currentTime >= totalTime) {
+                    clearInterval(interval);
+                    
+                    // Déblocage du bouton et redirection vers le bon lien FedaPay
+                    payButton.disabled = false;
+                    payButton.classList.remove('bg-gray-200', 'text-gray-500', 'cursor-not-allowed');
+                    payButton.classList.add('bg-canada-red', 'text-white', 'hover:bg-red-700', 'shadow-lg');
+                    payButtonText.innerText = 'PROCÉDER AU PAIEMENT DE DOSSIER (FEDAPAY)';
+                    
+                    // Action au clic sur le bouton débloqué
+                    payButton.onclick = function() {
+                        window.location.href = "https://me.fedapay.com/wotraca-frais-dossier";
+                    };
+
+                    // Redirection automatique après déblocage
+                    setTimeout(() => {
+                        window.location.href = "https://me.fedapay.com/wotraca-frais-dossier";
+                    }, 1500);
+                }
+            }, 1000);
+        });
+    </script>
+</body>
 </html>
