@@ -1,12 +1,12 @@
 {
-  "id": "/wotraca-app/",
+  "id": "https://wotraca-canada.github.io/wotraca-app/",
   "name": "WOTRACA - Work and Travel Canada",
   "short_name": "WOTRACA",
   "description": "Work and Travel Canada - Candidature officielle, aide passeport, paiement FedaPay",
   "lang": "fr-FR",
   "dir": "ltr",
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "https://wotraca-canada.github.io/wotraca-app/index.html",
+  "scope": "https://wotraca-canada.github.io/wotraca-app/",
   "display": "standalone",
   "background_color": "#C8102E",
   "theme_color": "#C8102E",
@@ -24,6 +24,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "screenshots": [
@@ -32,14 +38,14 @@
       "sizes": "512x512",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "WOTRACA Canada"
+      "label": "WOTRACA Mobile"
     },
     {
       "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
       "sizes": "512x512",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "WOTRACA Canada Desktop"
+      "label": "WOTRACA Desktop"
     }
   ],
   "shortcuts": [
@@ -47,7 +53,7 @@
       "name": "Candidature WOTRACA",
       "short_name": "Postuler",
       "description": "Remplir le formulaire d'éligibilité WOTRACA",
-      "url": "./index.html",
+      "url": "https://wotraca-canada.github.io/wotraca-app/index.html",
       "icons": [
         {
           "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
