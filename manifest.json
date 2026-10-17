@@ -1,12 +1,12 @@
 {
-  "id": "https://wotraca-canada.github.io/wotraca-app/",
+  "id": "/wotraca-app/",
   "name": "WOTRACA - Work and Travel Canada",
   "short_name": "WOTRACA",
   "description": "Work and Travel Canada - Candidature officielle, aide passeport, paiement FedaPay",
   "lang": "fr-FR",
   "dir": "ltr",
-  "start_url": "https://wotraca-canada.github.io/wotraca-app/index.html",
-  "scope": "https://wotraca-canada.github.io/wotraca-app/",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "display_override": [
     "standalone",
@@ -26,22 +26,17 @@
     "productivity"
   ],
   "prefer_related_applications": false,
-  "related_applications": [
-    {
-      "platform": "play",
-      "url": "https://wotraca-canada.github.io/wotraca-app/index.html",
-      "id": "com.wotraca.app"
-    }
-  ],
-  "scope_extensions": [
-    {
-      "origin": "https://wotraca-canada.github.io"
-    }
-  ],
+  "related_applications": [],
   "icons": [
     {
       "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     }
@@ -67,7 +62,7 @@
       "name": "Candidature WOTRACA",
       "short_name": "Postuler",
       "description": "Remplir le formulaire d'éligibilité WOTRACA",
-      "url": "https://wotraca-canada.github.io/wotraca-app/index.html",
+      "url": "./index.html",
       "icons": [
         {
           "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
@@ -78,7 +73,7 @@
     }
   ],
   "share_target": {
-    "action": "https://wotraca-canada.github.io/wotraca-app/index.html",
+    "action": "./index.html",
     "method": "GET",
     "params": {
       "title": "title",
@@ -92,12 +87,12 @@
   "protocol_handlers": [
     {
       "protocol": "web+wotraca",
-      "url": "https://wotraca-canada.github.io/wotraca-app/index.html?req=%s"
+      "url": "./index.html?req=%s"
     }
   ],
   "file_handlers": [
     {
-      "action": "https://wotraca-canada.github.io/wotraca-app/index.html",
+      "action": "./index.html",
       "accept": {
         "text/plain": [".txt"]
       }
@@ -106,4 +101,34 @@
   "edge_side_panel": {
     "preferred_width": 400
   },
-  "widgets":
+  "widgets": [
+    {
+      "name": "WOTRACA Status",
+      "short_name": "WOTRACA",
+      "description": "Suivi de candidature WOTRACA Canada",
+      "tag": "wotraca-widget",
+      "template": "wotraca-template",
+      "ms_ac_template": "./widget.json",
+      "data": "./widget-data.json",
+      "type": "application/json",
+      "screenshots": [
+        {
+          "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "label": "WOTRACA Widget"
+        }
+      ],
+      "icons": [
+        {
+          "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "note_taking": {
+    "new_note_url": "./index.html"
+  }
+}
