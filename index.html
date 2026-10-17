@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#C8102E">
-    
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#C8102E">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WOTRACA - Work and Travel Canada</title>
@@ -198,15 +198,29 @@
                     <label class="block font-semibold text-gray-700 mb-1">Métier Souhaité</label>
                     <input type="text" id="job" placeholder="Ex: Cuisinier / Cuisinière" required class="w-full p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:outline-none">
                 </div>
+
+                <!-- SECTION PASSEPORT ET ASSISTANCE DYNAMIQUE -->
                 <div>
                     <label class="block font-semibold text-gray-700 mb-1">Disposez-vous d'un Passeport valide ?</label>
-                    <select id="passport" class="w-full p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    <select id="passport" onchange="togglePassportAssistance(this.value)" class="w-full p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:outline-none">
                         <option value="Oui">Oui, passeport valide</option>
                         <option value="En cours">En cours de renouvellement / d'établissement</option>
                         <option value="Non">Non, pas encore</option>
                     </select>
                 </div>
-                <button type="submit" class="w-full bg-canada-red text-white font-bold py-3 rounded-xl shadow-lg hover:bg-red-700 transition flex justify-center items-center space-x-2">
+
+                <!-- Module Alerte Assistance Passeport (s'affiche si NON ou EN COURS) -->
+                <div id="no-passport-alert" class="hidden p-3 bg-red-50 border-l-4 border-canada-red rounded-xl space-y-2 mt-2">
+                    <p class="font-semibold text-gray-800 text-[11px] leading-snug">
+                        ⚠️ <strong>Pas encore de passeport ?</strong> Pas d'inquiétude ! L'équipe WOTRACA vous accompagne à 100% dans la procédure d'obtention prioritaire de votre passeport pour finaliser votre dossier d'immigration.
+                    </p>
+                    <a href="https://wa.me/12029772153" target="_blank" class="inline-flex items-center space-x-1.5 bg-green-600 text-white px-3 py-2 rounded-lg font-bold text-[11px] shadow hover:bg-green-700 transition">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <span>Demander l'aide Passeport sur WhatsApp</span>
+                    </a>
+                </div>
+
+                <button type="submit" class="w-full bg-canada-red text-white font-bold py-3 rounded-xl shadow-lg hover:bg-red-700 transition flex justify-center items-center space-x-2 mt-4">
                     <i class="fa-solid fa-paper-plane text-lg"></i>
                     <span>Soumettre ma candidature</span>
                 </button>
@@ -274,6 +288,18 @@
     <a href="https://wa.me/12029772153" target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-green-600 transition z-40">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <!-- SCRIPT GESTION PASSEPORT -->
+    <script>
+        function togglePassportAssistance(val) {
+            const alertBox = document.getElementById('no-passport-alert');
+            if (val === 'Non' || val === 'En cours') {
+                alertBox.classList.remove('hidden');
+            } else {
+                alertBox.classList.add('hidden');
+            }
+        }
+    </script>
 
     <!-- SCRIPT DE CHRONOMÈTRE ET ANALYSE DYNAMIQUE -->
     <script>
@@ -347,7 +373,8 @@
                 }
             }, 1000);
         });
-    </script><script>
+    </script>
+    <script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js');
     }
