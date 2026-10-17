@@ -1,4 +1,5 @@
 {
+  "id": "/wotraca-app/",
   "name": "WOTRACA - Work and Travel Canada",
   "short_name": "WOTRACA",
   "description": "Work and Travel Canada - Candidature officielle, aide passeport, paiement FedaPay",
@@ -13,6 +14,15 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/197/197430.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "WOTRACA Canada"
     }
   ]
 }
